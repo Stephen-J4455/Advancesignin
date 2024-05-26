@@ -20,7 +20,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="styles.css" />
-                <script type="module" src="Advancesignup.js"> </script>
+        <script type="module" src="Advancesignup.js"></script>
     </head>
 
     <body>
@@ -64,6 +64,11 @@
                 v
             </span>
         </div>
+       <!--  signUp message --> 
+       <div id="signUpMessage" class="sign-up-message">
+       	
+       </div>
+       <!-- end of sign up message --> 
         <div class="sign-up-container">
             <h2 class="sign-up">Sign Up</h2>
             <form>
@@ -94,7 +99,12 @@
                     required
                 /><br /><br />
 
-                <input class="submit" type="submit" value="Sign Up" />
+                <input
+                    id="submit"
+                    class="submit"
+                    type="submit"
+                    value="Sign Up"
+                />
                 <a class="forgot-password" href=""> Forgot Password </a>
                 <a class="log-in" href="#"> Log In </a>
             </form>
