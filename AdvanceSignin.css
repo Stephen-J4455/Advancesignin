@@ -1,0 +1,146 @@
+body{
+   margin: 0;
+   font-family: "Euclid Circular A", "Poppins";
+   color: black;
+}
+
+.sign-up-container{
+	height: 540px;
+	width: 360px;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	top: 90px;
+}
+.sign-up{
+	position: absolute;
+	top: -20px;
+	font-size: 30px;
+}
+form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3px;
+}
+.input{
+	border-radius: 10px;
+	padding-left: 10px;
+	height: 30px;
+	width: 200px;
+	border: none;
+	border-style: none;
+	outline: none;
+	overflow: hidden;
+	box-shadow: 3px 3px 5px #C8C8C8;
+}
+.submit{
+	border: none;
+	height: 30px;
+	width: 100px;
+	border-radius: 10px;
+	background: linear-gradient(to right,#E5FFB3,#B3FFC8,#B3F2FF,#B3B9FF,#E9B3FF);
+	outline: none;
+	color: #111111;
+}
+.submit:hover{
+	transform: scale(1.09);
+	transition: .3s ease;
+}
+.forgot-password{
+   position: relative;
+   top: 25px;
+   left: -100px;
+   text-decoration: none;
+   outline: cyan;
+   color: black;
+   
+}
+.log-in{
+   position: relative;
+   left: 100px;
+   text-decoration: none;
+   color: black;
+}
+.logo{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   top: 10px;
+   left: 110px;
+   z-index: 1;
+   font-size: 30px;
+}
+.logo span:nth-child(1){
+   position: relative;
+   border: 10px solid;
+   border-color: darkgreen;
+   border-radius: 50px;
+   background-color: darkorange;
+   color: white;
+   display: flex;
+   height: 30px;
+   width: 30px;
+   align-items: center;
+   justify-content: center;
+}
+.logo span:nth-child(2){
+   color: darkorange;
+}
+.logo span:nth-child(3){
+   color: darkgreen;
+}
+.logo span:nth-child(4){
+   color: darkorange;
+}
+.logo span:nth-child(5) {
+   color: darkgreen;
+}
+.logo span:nth-child(6) {
+   color: darkorange;
+}
+.logo span:nth-child(7) {
+   color: darkgreen;
+}
+
+ul {
+   display: flex;
+   list-style: none;
+}
+
+.socials {
+   left: 70px;
+   gap: 20px;
+   position: absolute;
+   top: 600px;
+}
+
+.socials a {
+   font-size: 24px;
+}
+
+.links {
+   gap: 5px;
+   top: 640px;
+   position: absolute;
+}
+
+.legal {
+   font-size: 12px;
+   position: absolute;
+   top: 680px;
+   left: 110px;
+}
+
+section {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   gap: 30px;
+   padding-bottom: 0;
+   padding-left: 0;
+   width: 100%;
+}
