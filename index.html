@@ -2,70 +2,130 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sign Up Form</title>
-    </head>
-    <body>
-        <form id="signupForm">
-            <label for="email">Email:</label><br />
-            <input type="email" id="email" name="email" required /><br />
-            <label for="password">Password:</label><br />
-            <input
-                type="password"
-                id="password"
-                name="password"
-                required
-            /><br />
-            <button type="submit">Sign Up</button>
-        </form>
-
-        <!-- Firebase SDK -->
+        <title>Online Store Sign Up page</title>
+        <link rel="stylesheet" href="AdvanceSignin.css" \ />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <script type="module" src="register.js" defer></script>
         <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js"></script>
+    </head>
 
-        <script>
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
-            import {
-                getAuth,
-                createUserWithEmailAndPassword,
-                signInWithEmailAndPassword
-            } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
-            import {
-                getFirestore,
-                setdoc,
-                doc
-            } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js";
-            // Your web app's Firebase configuration
-            const firebaseConfig = {
-                apiKey: "AIzaSyCG7fRw21apfTA36HKl5LbVWiHI_8zk12A",
-                authDomain: "signup-bfcf8.firebaseapp.com",
-                projectId: "signup-bfcf8",
-                storageBucket: "signup-bfcf8.appspot.com",
-                messagingSenderId: "862509936181",
-                appId: "1:862509936181:web:6a16490f27a97bac7bcb7c"
-            };
+    <body>
+        <div class="logo">
+            <span>
+                <svg
+                    class="w-6 h-6 text-gray-800 dark:text-white"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M4 4a1 1 0 0 1 1-1h1.5a1 1 0 0 1 .979.796L7.939 6H19a1 1 0 0 1 .979 1.204l-1.25 6a1 1 0 0 1-.979.796H9.605l.208 1H17a3 3 0 1 1-2.83 2h-2.34a3 3 0 1 1-4.009-1.76L5.686 5H5a1 1 0 0 1-1-1Z"
+                        clip-rule="evenodd"
+                    />
+                </svg>
+            </span>
+            <span> E </span>
+            <span>
+                <!--Tab to edit-->
+                m
+            </span>
+            <span>
+                <!--Tab to edit-->
+                p
+            </span>
+            <span>
+                <!--Tab to edit-->
+                v
+            </span>
+            <span>
+                <!--Tab to edit-->
+                i
+            </span>
+            <span>
+                <!--Tab to edit-->
+                v
+            </span>
+        </div>
+        <!--  signUp message -->
+        <div id="signUpMessage" class="sign-up-message"></div>
+        <!-- end of sign up message -->
+        <div class="sign-up-container">
+            <h2 class="sign-up">Sign Up</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input
+                    class="input"
+                    type="text"
+                    id="username"
+                    name="username"
+                    required
+                /><br /><br />
 
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
+                <label for="email">Email:</label>
+                <input
+                    class="input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                /><br /><br />
 
-            const signupForm = document.getElementById("signupForm");
-            signupForm.addEventListener("submit", e => {
-                e.preventDefault();
-                const email = signupForm["email"].value;
-                const password = signupForm["password"].value;
+                <label for="password">Password:</label>
+                <input
+                    class="input"
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                /><br /><br />
 
-                firebase
-                    .auth()
-                    .createUserWithEmailAndPassword(email, password)
-                    .then(userCredential => {
-                        // Signed up successfully
-                        console.log("User signed up:", userCredential.user);
-                    })
-                    .catch(error => {
-                        // Handle errors
-                        console.error("Sign up error:", error.message);
-                    });
-            });
-        </script>
+                <input
+                    id="submit"
+                    class="submit"
+                    type="submit"
+                    value="Sign Up"
+                />
+                <a class="forgot-password" href=""> Forgot Password </a>
+                <a class="log-in" href="#"> Log In </a>
+            </form>
+        </div>
+        <footer>
+            <section>
+                <ul class="socials">
+                    <li><a class="fa-brands fa-facebook"></a></li>
+                    <li><a class="fa-brands fa-twitter"></a></li>
+                    <li><a class="fa-brands fa-linkedin"></a></li>
+                    <li><a class="fa-brands fa-instagram"></a></li>
+                </ul>
+                <ul class="links">
+                    <li><a>Terms</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Services</a></li>
+                    <li><a>Team</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+                <p class="legal">© 2024 All rights reserved</p>
+            </section>
+        </footer>
     </body>
 </html>
